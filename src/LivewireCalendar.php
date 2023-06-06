@@ -42,6 +42,8 @@ class LivewireCalendar extends Component
     public $weekStartsAt;
     public $weekEndsAt;
 
+    public $selectedMonth;
+
     public $calendarView;
     public $dayView;
     public $eventView;
