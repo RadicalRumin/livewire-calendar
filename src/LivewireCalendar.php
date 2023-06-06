@@ -161,6 +161,15 @@ class LivewireCalendar extends Component
         $this->calculateGridStartsEnds();
     }
 
+    public function goToSelectedMonth(String $selectedMonth)
+    {
+        $selectedMonth = Carbon::createFromFormat('Y-m', $this->selectedMonth)->startOfMonth();
+        $this->startsAt = $selectedMonth->startOfDay();
+        $this->endsAt = $selectedMonth->endOfMonth()->startOfDay();
+        
+        $this->calculateGridStartsEnds();
+    }
+
     public function calculateGridStartsEnds()
     {
         $this->gridStartsAt = $this->startsAt->clone()->startOfWeek($this->weekStartsAt);
