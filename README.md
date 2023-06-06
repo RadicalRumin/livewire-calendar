@@ -8,8 +8,12 @@ from within the component and will be presented on each day depending on the dat
 ![preview](https://github.com/asantibanez/livewire-calendar/raw/master/preview.gif)
 
 ## Installation
+Override the standard repo in composer.json by adding the following:
+```bash
+"repositories": [{ "type": "package", "canonical": false, "package": { "version": "master", "name": "asantibanez/livewire-calendar", "source": { "url": "https://github.com/RadicalRumin/livewire-calendar.git", "type": "git", "reference": "master" } } }],
+```
 
-You can install the package via composer:
+Then, you can install the package via composer:
 
 ```bash
 composer require asantibanez/livewire-calendar
@@ -120,14 +124,14 @@ This will render a calendar grid.
 ![example](https://github.com/asantibanez/livewire-calendar/raw/master/example.png)
 
 By default, the component will render the current month. If you want to change the
-starting month, you can set the `year` and `month` props.
+starting month, you can set the `initialYear` and `initialMonth` props.
 
  Example
  
  ```blade
 <livewire:appointments-calendar
-    year="2019"
-    month="12"
+    initialYear="2019"
+    initialMonth="12"
 />
  ``` 
 
