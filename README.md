@@ -143,11 +143,13 @@ You must include them after `@livewireScripts`
 @livewireCalendarScripts
 ``` 
 
-The component has 3 public methods that can help navigate forward and backward through months: 
+The component has 4 public methods that can help navigate forward and backward through months: 
 - `goToPreviousMonth`
 - `goToNextMonth` 
 - `goToCurrentMonth`
+- `goToCurrentMonth`
 
+The last of which takes a date as an argument in the form of a string, so it can be used with default html date controls.
 You can use these methods on extra views using `before-calendar-view` or `after-calendar-view` explained below.  
 
 ### Advanced usage
