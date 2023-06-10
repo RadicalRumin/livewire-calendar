@@ -2,6 +2,7 @@
     @if($eventClickEnabled)
         wire:click.stop="onEventClick('{{ $event['id']  }}')"
     @endif
+    dusk="calendar-event"
     class="bg-white rounded-lg border py-2 px-3 shadow-md cursor-pointer">
 
     <p class="text-sm font-medium">
